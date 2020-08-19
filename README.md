@@ -1,6 +1,7 @@
 # MRPMC: Mortality Risk Prediction Model for COVID-19
 
-MRPMC: Mortality Risk Prediction Model for COVID-19
+MRPMC: Mortality Risk Prediction Model for COVID-19 [![DOI](https://zenodo.org/badge/288612132.svg)](https://zenodo.org/badge/latestdoi/288612132)
+
 
 
 ## Pre-requirements
