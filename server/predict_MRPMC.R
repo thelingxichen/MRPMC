@@ -25,8 +25,8 @@ pred_models <- function(model_list, X, cutoff){
     df[[m]] <- pred_func(model_list[[m]], calibrate_model_list[[m]], X)
   }
   rownames(df) <- rownames(X)
-  df$Ensemble <- df$LR*0.25 + df$SVM*0.3 + + df$GBDT*0.1 + df$NN*0.35
-  df$Cluster <- as.factor(as.numeric(df$Ensemble >= cutoff))
+  df$Probability <- df$LR*0.25 + df$SVM*0.3 + + df$GBDT*0.1 + df$NN*0.35
+  df$Cluster <- as.factor(as.numeric(df$Probability >= cutoff))
   df$`Risk group`[df$Cluster == '0'] <- 'Non critical'
   df$`Risk group`[df$Cluster == '1'] <- 'Critical'
   return(df)
