@@ -1,18 +1,23 @@
-# MRPMC: Mortality Risk Prediction Model for COVID-19
 
-MRPMC: Mortality Risk Prediction Model for COVID-19 [![DOI](https://zenodo.org/badge/288612132.svg)](https://zenodo.org/badge/latestdoi/288612132)
+# CIRPMC: Critical Illness Risk Prediction Model for COVID-19
 
+CIRPMC: Critical Illness Risk Prediction Model for COVID-19 (https://cirpmc.deepomics.org/)
 
 
 ## Pre-requirements
-* R 3.2.6
+* R3.6
+* caret
+* e1071
+* gbm
+* randomForest
+
 
 ## Installation
 
 ### Installation from Github
 To clone the repository and install manually, run the following from a terminal:
 ```Bash
-git clone https://github.com/paprikachan/MRPMC.git
+git clone https://github.com/paprikachan/CIRPMC.git
 cd CIRPMC
 ```
 
@@ -36,10 +41,10 @@ Options:
 ```
 
 ### Quick start
-The following code runs an example of MRPMC.
+The following code runs an example of CIRPMC.
 
 ```shell
-server/predict_MRPMC.R -i test_X.csv -o pred_Y.csv
+predict_CIRPMC.R -i test_X.csv -o pred_y.csv
 ```
 
 ## File format
@@ -47,38 +52,20 @@ server/predict_MRPMC.R -i test_X.csv -o pred_Y.csv
 ### Input file
 
 
-Input file is a csv file, stores the measurements of 23 markers for each patient:
-* BUN	
-* SpO2	
-* RR	
-* No. comorbidities	
-* D-Dimer	
-* Age	
-* Hypertention	
-* LDH	
-* APTT	
-* WBC	
-* LBC	
-* PT	
-* UA	
-* Consciousness	
-* Hb	
-* ALB	
-* Diabetes	
-* Coronary heart disease	
-* PLT	
-* CRP	
-* Sputum	
-* TB	
-* PCT
- 
+Input file is a csv file, stores the measurements of four inflammatory markers for each patient:
+* TNF-α (pg/mL, 0-8.1)
+* CRP   (mg/L,  > 0)
+* IL-2R (pg/mL, 223-710)
+* IL-6  (pg/mL, 0-7.0)
+
+Note: TNF-α, tumor necrosis factor α. CRP, C reactive protein. IL-2R, interleukin 2R. IL-6, interleukin 6.
 
 ### Output file
-Out file is a csv file, stores the predicted results from MRPMC:
+Out file is a csv file, stores the predicted results from CIRPMC:
 * LR: The predicted critical illness probablity from logistic regression
 * SVM: The predicted critical illness probablity from supported vector machine
-* RF: The predicted critical illness probablity from random forest
 * GBDT: The predicted critical illness probablity from gradient boosted decision tree
+* KNN: The predicted critical illness probablity from k-nearest neighbor
 * NN: The predicted critical illness probablity from neural network
 * Probability: The predicted critical illness probablity from our ensemble model CIRPMC
 * Cluster: The predicted critical illness status, 0 or 1.
@@ -88,5 +75,4 @@ Out file is a csv file, stores the predicted results from MRPMC:
 ## Cite us
 
 ## Help
-If you have any questions or require assistance using MRPMC, please open an issue.
-
+If you have any questions or require assistance using CIRPMC, please open an issue.
