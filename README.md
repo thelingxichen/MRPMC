@@ -70,14 +70,14 @@ Input file is a csv file, stores the measurements of 14 lab test features for ea
 
 
 ### Output file
-Out file is a csv file, stores the predicted results from CIRPMC:
-* LR: The predicted critical illness probablity from logistic regression
-* SVM: The predicted critical illness probablity from supported vector machine
-* KNN: The predicted critical illness probablity from k-nearest neighbor
-* RF: The predicted critical illness probablity from random forest
-* GBDT: The predicted critical illness probablity from gradient boosted decision tree
-* NN: The predicted critical illness probablity from neural network
-* Probability: The predicted critical illness probablity from our ensemble model CIRPMC
+Out file is a csv file, stores the predicted results from MRPMC:
+* LR: The predicted critical illness probablity from logistic regression.
+* SVM: The predicted critical illness probablity from supported vector machine.
+* KNN: The predicted critical illness probablity from k-nearest neighbor.
+* RF: The predicted critical illness probablity from random forest.
+* GBDT: The predicted critical illness probablity from gradient boosted decision tree.
+* NN: The predicted critical illness probablity from neural network.
+* Probability: The predicted critical illness probablity from our ensemble model MRPMC.
 * Cluster: The predicted critical illness status, 0 or 1.
 * Risk group: The stratified risk group, Non-critical or Critical.
 
