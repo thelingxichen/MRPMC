@@ -5,22 +5,14 @@ MRPMC: Mortality Risk Prediction Model for COVID-19 [![DOI](https://zenodo.org/b
 
 
 ## Pre-requirements
-* Python 3.7
-* numpy 1.16
-* pandas 0.25
-* lightgbm 2.3.1
-* scikit-learn
-* shap 0.35
-* tensorflow 2.2.0
-* mlxtend 0.17.2
-
+* R 3.2.6
 
 ## Installation
 
 ### Installation from Github
 To clone the repository and install manually, run the following from a terminal:
 ```Bash
-git clone https://github.com/paprikachan/CIRPMC.git
+git clone https://github.com/paprikachan/MRPMC.git
 cd CIRPMC
 ```
 
@@ -44,10 +36,10 @@ Options:
 ```
 
 ### Quick start
-The following code runs an example of CIRPMC.
+The following code runs an example of MRPMC.
 
 ```shell
-predict_CIRPMC.R -i test_X.csv -o pred_Y.csv
+server/predict_MRPMC.R -i test_X.csv -o pred_Y.csv
 ```
 
 ## File format
@@ -96,5 +88,5 @@ Out file is a csv file, stores the predicted results from MRPMC:
 ## Cite us
 
 ## Help
-If you have any questions or require assistance using CIRPMC, please open an issue.
+If you have any questions or require assistance using MRPMC, please open an issue.
 
