@@ -1,7 +1,7 @@
 
 # MRPMC: Mortality Risk Prediction Model for COVID-19
 
-MRPMC: Mortality Risk Prediction Model for COVID-19
+MRPMC: Mortality Risk Prediction Model for COVID-19 (https://cmp.tjh.com.cn/)
 
 
 ## Pre-requirements
@@ -82,6 +82,8 @@ Out file is a csv file, stores the predicted results from MRPMC:
 * Risk group: The stratified risk group, Non-critical or Critical.
 
 ## Cite us
+
+Gao, Y., Cai, G., Fang, W. et al. Machine learning based early warning system enables accurate mortality risk prediction for COVID-19. Nat Commun 11, 5033 (2020). https://doi.org/10.1038/s41467-020-18684-2
 
 ## Help
 If you have any questions or require assistance using MRPMC, please open an issue.
