@@ -18,7 +18,7 @@ MRPMC: Mortality Risk Prediction Model for COVID-19 (https://cmp.tjh.com.cn/)
 To clone the repository and install manually, run the following from a terminal:
 ```Bash
 git clone https://github.com/paprikachan/MRPMC.git
-cd MRPMC
+cd MRPMC/server
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ cd MRPMC
 
 In command line:
 ```shell
-Usage: Rscript server/predict_MRPMC.R [options]
+Usage: Rscript predict_MRPMC.R [options]
 
 Options:
         -i CHARACTER, --infile=CHARACTER
@@ -44,7 +44,8 @@ Options:
 The following code runs an example of MRPMC.
 
 ```shell
-server/predict_MRPMC.R -i test_X.csv -o pred_y.csv
+$MRPMC/server
+Rscript predict_MRPMC.R -i test_X.csv -o pred_y.csv
 ```
 
 ## File format
